@@ -24,6 +24,9 @@ import java.util.Optional;
 @DataMongoTest(excludeAutoConfiguration = EmbeddedMongoAutoConfiguration.class)
 public class PedidoRepositoryTest {
 
+  @Container
+  static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo");
+
   @Autowired
   private PedidoRepository pedidoRepository;
 
